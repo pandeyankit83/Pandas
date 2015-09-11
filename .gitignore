@@ -1,0 +1,6 @@
+MANIFEST
+.DS_Store
+.noseids
+graphs/Cython
+asv_bench
+*~
