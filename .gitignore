@@ -3,3 +3,7 @@ MANIFEST
 .noseids
 asv_bench
 *~
+*.pyc
+build/
+pandas/
+.ipynb_checkpoints/
