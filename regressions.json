@@ -13,7 +13,23 @@
                     ]
                 ], 
                 0.028984000000000065, 
-                0.005337399999999997
+                0.005119499999999988
+            ]
+        ], 
+        [
+            "indexing.sort_level_zero.time_sort_level_zero", 
+            "graphs/Cython/arch-x86_64/branch-master/cpu-Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz/machine-069-jreback.home/matplotlib/numexpr/numpy/openpyxl/os-Darwin 13.4.0/pytables/python-2.7/ram-16GB/scipy/sqlalchemy/xlrd/xlwt/indexing.sort_level_zero.time_sort_level_zero.json", 
+            {}, 
+            null, 
+            [
+                [
+                    [
+                        1396356779000, 
+                        1401450122000
+                    ]
+                ], 
+                0.010989149999999996, 
+                0.003393599999999994
             ]
         ], 
         [
@@ -33,6 +49,22 @@
             ]
         ], 
         [
+            "panel_methods.panel_shift.time_panel_shift", 
+            "graphs/Cython/arch-x86_64/branch-master/cpu-Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz/machine-069-jreback.home/matplotlib/numexpr/numpy/openpyxl/os-Darwin 13.4.0/pytables/python-2.7/ram-16GB/scipy/sqlalchemy/xlrd/xlwt/panel_methods.panel_shift.time_panel_shift.json", 
+            {}, 
+            null, 
+            [
+                [
+                    [
+                        1396356779000, 
+                        1401450122000
+                    ]
+                ], 
+                7.500700000000027e-05, 
+                4.649700000000001e-05
+            ]
+        ], 
+        [
             "frame_ctor.frame_ctor_dtindex_Microx2.time_frame_ctor_dtindex_Microx2", 
             "graphs/Cython/arch-x86_64/branch-master/cpu-Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz/machine-069-jreback.home/matplotlib/numexpr/numpy/openpyxl/os-Darwin 13.4.0/pytables/python-2.7/ram-16GB/scipy/sqlalchemy/xlrd/xlwt/frame_ctor.frame_ctor_dtindex_Microx2.time_frame_ctor_dtindex_Microx2.json", 
             {}, 
@@ -45,7 +77,55 @@
                     ]
                 ], 
                 0.0011994300000000002, 
-                0.0007664300000000001
+                0.0007085300000000005
+            ]
+        ], 
+        [
+            "frame_methods.frame_fancy_lookup.time_frame_fancy_lookup", 
+            "graphs/Cython/arch-x86_64/branch-master/cpu-Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz/machine-069-jreback.home/matplotlib/numexpr/numpy/openpyxl/os-Darwin 13.4.0/pytables/python-2.7/ram-16GB/scipy/sqlalchemy/xlrd/xlwt/frame_methods.frame_fancy_lookup.time_frame_fancy_lookup.json", 
+            {}, 
+            null, 
+            [
+                [
+                    [
+                        1396356779000, 
+                        1401450122000
+                    ]
+                ], 
+                0.002994550000000001, 
+                0.002394649999999998
+            ]
+        ], 
+        [
+            "stat_ops.stat_ops_frame_mean_int_axis_0.time_stat_ops_frame_mean_int_axis_0", 
+            "graphs/Cython/arch-x86_64/branch-master/cpu-Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz/machine-069-jreback.home/matplotlib/numexpr/numpy/openpyxl/os-Darwin 13.4.0/pytables/python-2.7/ram-16GB/scipy/sqlalchemy/xlrd/xlwt/stat_ops.stat_ops_frame_mean_int_axis_0.time_stat_ops_frame_mean_int_axis_0.json", 
+            {}, 
+            null, 
+            [
+                [
+                    [
+                        1428943100000, 
+                        1433426744000
+                    ]
+                ], 
+                0.004506499999999999, 
+                0.0039042500000000006
+            ]
+        ], 
+        [
+            "indexing.indexing_panel_subset.time_indexing_panel_subset", 
+            "graphs/Cython/arch-x86_64/branch-master/cpu-Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz/machine-069-jreback.home/matplotlib/numexpr/numpy/openpyxl/os-Darwin 13.4.0/pytables/python-2.7/ram-16GB/scipy/sqlalchemy/xlrd/xlwt/indexing.indexing_panel_subset.time_indexing_panel_subset.json", 
+            {}, 
+            null, 
+            [
+                [
+                    [
+                        1388422887000, 
+                        1391301735000
+                    ]
+                ], 
+                0.0008405749999999992, 
+                0.0005146049999999999
             ]
         ], 
         [
@@ -61,23 +141,7 @@
                     ]
                 ], 
                 0.07010700000000103, 
-                0.03317449999999944
-            ]
-        ], 
-        [
-            "parser_vb.read_csv_thou_vb.time_read_csv_thou_vb", 
-            "graphs/Cython/arch-x86_64/branch-master/cpu-Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz/machine-069-jreback.home/matplotlib/numexpr/numpy/openpyxl/os-Darwin 13.4.0/pytables/python-2.7/ram-16GB/scipy/sqlalchemy/xlrd/xlwt/parser_vb.read_csv_thou_vb.time_read_csv_thou_vb.json", 
-            {}, 
-            null, 
-            [
-                [
-                    [
-                        1409898548000, 
-                        1413672736000
-                    ]
-                ], 
-                0.018634999999999995, 
-                0.015248200000000012
+                0.029408999999999352
             ]
         ], 
         [
@@ -129,6 +193,42 @@
             ]
         ], 
         [
+            "join_merge.append_frame_single_homogenous.time_append_frame_single_homogenous", 
+            "graphs/Cython/arch-x86_64/branch-master/cpu-Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz/machine-069-jreback.home/matplotlib/numexpr/numpy/openpyxl/os-Darwin 13.4.0/pytables/python-2.7/ram-16GB/scipy/sqlalchemy/xlrd/xlwt/join_merge.append_frame_single_homogenous.time_append_frame_single_homogenous.json", 
+            {}, 
+            null, 
+            [
+                [
+                    [
+                        1391301735000, 
+                        1396356779000
+                    ], 
+                    [
+                        1404748822000, 
+                        1409898548000
+                    ]
+                ], 
+                0.001088955, 
+                0.00020131999999999984
+            ]
+        ], 
+        [
+            "frame_methods.frame_mask_bools.time_frame_mask_bools", 
+            "graphs/Cython/arch-x86_64/branch-master/cpu-Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz/machine-069-jreback.home/matplotlib/numexpr/numpy/openpyxl/os-Darwin 13.4.0/pytables/python-2.7/ram-16GB/scipy/sqlalchemy/xlrd/xlwt/frame_methods.frame_mask_bools.time_frame_mask_bools.json", 
+            {}, 
+            null, 
+            [
+                [
+                    [
+                        1396356779000, 
+                        1401450122000
+                    ]
+                ], 
+                0.009249050000000003, 
+                0.008425949999999998
+            ]
+        ], 
+        [
             "indexing.series_xs_mi_ix.time_series_xs_mi_ix", 
             "graphs/Cython/arch-x86_64/branch-master/cpu-Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz/machine-069-jreback.home/matplotlib/numexpr/numpy/openpyxl/os-Darwin 13.4.0/pytables/python-2.7/ram-16GB/scipy/sqlalchemy/xlrd/xlwt/indexing.series_xs_mi_ix.time_series_xs_mi_ix.json", 
             {}, 
@@ -136,12 +236,16 @@
             [
                 [
                     [
+                        1381408995000, 
+                        1388422887000
+                    ], 
+                    [
                         1413672736000, 
                         1419909362000
                     ]
                 ], 
                 0.0037376499999999977, 
-                0.00027446999999999997
+                0.0001669999999998062
             ]
         ], 
         [
@@ -157,7 +261,7 @@
                     ]
                 ], 
                 0.0012323300000000004, 
-                0.0007848100000000003
+                0.0007035599999999998
             ]
         ], 
         [
@@ -173,7 +277,59 @@
                     ]
                 ], 
                 0.009087199999999997, 
-                0.005957000000000001
+                0.005868000000000001
+            ]
+        ], 
+        [
+            "indexing.sort_level_one.time_sort_level_one", 
+            "graphs/Cython/arch-x86_64/branch-master/cpu-Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz/machine-069-jreback.home/matplotlib/numexpr/numpy/openpyxl/os-Darwin 13.4.0/pytables/python-2.7/ram-16GB/scipy/sqlalchemy/xlrd/xlwt/indexing.sort_level_one.time_sort_level_one.json", 
+            {}, 
+            null, 
+            [
+                [
+                    [
+                        1396356779000, 
+                        1401450122000
+                    ]
+                ], 
+                0.011052200000000002, 
+                0.0034224999999999976
+            ]
+        ], 
+        [
+            "ctors.frame_constructor_ndarray.time_frame_constructor_ndarray", 
+            "graphs/Cython/arch-x86_64/branch-master/cpu-Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz/machine-069-jreback.home/matplotlib/numexpr/numpy/openpyxl/os-Darwin 13.4.0/pytables/python-2.7/ram-16GB/scipy/sqlalchemy/xlrd/xlwt/ctors.frame_constructor_ndarray.time_frame_constructor_ndarray.json", 
+            {}, 
+            null, 
+            [
+                [
+                    [
+                        1396356779000, 
+                        1401450122000
+                    ], 
+                    [
+                        1419909362000, 
+                        1428943100000
+                    ]
+                ], 
+                7.559699999999997e-05, 
+                3.483450000000002e-05
+            ]
+        ], 
+        [
+            "frame_ctor.frame_ctor_dtindex_BQuarterBeginx2.time_frame_ctor_dtindex_BQuarterBeginx2", 
+            "graphs/Cython/arch-x86_64/branch-master/cpu-Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz/machine-069-jreback.home/matplotlib/numexpr/numpy/openpyxl/os-Darwin 13.4.0/pytables/python-2.7/ram-16GB/scipy/sqlalchemy/xlrd/xlwt/frame_ctor.frame_ctor_dtindex_BQuarterBeginx2.time_frame_ctor_dtindex_BQuarterBeginx2.json", 
+            {}, 
+            null, 
+            [
+                [
+                    [
+                        1401450122000, 
+                        1404748822000
+                    ]
+                ], 
+                0.0015245099999999989, 
+                0.0009907299999999996
             ]
         ], 
         [
@@ -205,39 +361,43 @@
                     ]
                 ], 
                 0.010099000000000002, 
-                0.006616499999999997
+                0.006596799999999995
             ]
         ], 
         [
-            "stat_ops.stat_ops_frame_mean_int_axis_1.time_stat_ops_frame_mean_int_axis_1", 
-            "graphs/Cython/arch-x86_64/branch-master/cpu-Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz/machine-069-jreback.home/matplotlib/numexpr/numpy/openpyxl/os-Darwin 13.4.0/pytables/python-2.7/ram-16GB/scipy/sqlalchemy/xlrd/xlwt/stat_ops.stat_ops_frame_mean_int_axis_1.time_stat_ops_frame_mean_int_axis_1.json", 
+            "frame_ctor.frame_ctor_dtindex_QuarterBeginx2.time_frame_ctor_dtindex_QuarterBeginx2", 
+            "graphs/Cython/arch-x86_64/branch-master/cpu-Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz/machine-069-jreback.home/matplotlib/numexpr/numpy/openpyxl/os-Darwin 13.4.0/pytables/python-2.7/ram-16GB/scipy/sqlalchemy/xlrd/xlwt/frame_ctor.frame_ctor_dtindex_QuarterBeginx2.time_frame_ctor_dtindex_QuarterBeginx2.json", 
             {}, 
             null, 
             [
                 [
                     [
-                        1428943100000, 
-                        1433426744000
+                        1401450122000, 
+                        1404748822000
+                    ], 
+                    [
+                        1419909362000, 
+                        1428943100000
                     ]
                 ], 
-                0.004781750000000001, 
-                0.004072949999999997
+                0.0013858700000000002, 
+                0.00094805
             ]
         ], 
         [
-            "frame_methods.frame_apply_lambda_mean.time_frame_apply_lambda_mean", 
-            "graphs/Cython/arch-x86_64/branch-master/cpu-Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz/machine-069-jreback.home/matplotlib/numexpr/numpy/openpyxl/os-Darwin 13.4.0/pytables/python-2.7/ram-16GB/scipy/sqlalchemy/xlrd/xlwt/frame_methods.frame_apply_lambda_mean.time_frame_apply_lambda_mean.json", 
+            "frame_methods.frame_insert_100_columns_begin.time_frame_insert_100_columns_begin", 
+            "graphs/Cython/arch-x86_64/branch-master/cpu-Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz/machine-069-jreback.home/matplotlib/numexpr/numpy/openpyxl/os-Darwin 13.4.0/pytables/python-2.7/ram-16GB/scipy/sqlalchemy/xlrd/xlwt/frame_methods.frame_insert_100_columns_begin.time_frame_insert_100_columns_begin.json", 
             {}, 
             null, 
             [
                 [
                     [
-                        1404748822000, 
-                        1409898548000
+                        1396356779000, 
+                        1401450122000
                     ]
                 ], 
-                0.005146799999999996, 
-                0.0039013500000000035
+                0.03176700000000002, 
+                0.016721599999999996
             ]
         ], 
         [
@@ -253,7 +413,23 @@
                     ]
                 ], 
                 0.0012267799999999996, 
-                0.0007889899999999999
+                0.00067473
+            ]
+        ], 
+        [
+            "frame_methods.frame_dropna_axis1_any_mixed_dtypes.time_frame_dropna_axis1_any_mixed_dtypes", 
+            "graphs/Cython/arch-x86_64/branch-master/cpu-Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz/machine-069-jreback.home/matplotlib/numexpr/numpy/openpyxl/os-Darwin 13.4.0/pytables/python-2.7/ram-16GB/scipy/sqlalchemy/xlrd/xlwt/frame_methods.frame_dropna_axis1_any_mixed_dtypes.time_frame_dropna_axis1_any_mixed_dtypes.json", 
+            {}, 
+            null, 
+            [
+                [
+                    [
+                        1388422887000, 
+                        1391301735000
+                    ]
+                ], 
+                0.19363800000000014, 
+                0.16826049999999992
             ]
         ], 
         [
@@ -285,23 +461,23 @@
                     ]
                 ], 
                 0.00119224, 
-                0.0007766600000000001
+                0.0007276499999999997
             ]
         ], 
         [
-            "frame_methods.frame_apply_ref_by_name.time_frame_apply_ref_by_name", 
-            "graphs/Cython/arch-x86_64/branch-master/cpu-Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz/machine-069-jreback.home/matplotlib/numexpr/numpy/openpyxl/os-Darwin 13.4.0/pytables/python-2.7/ram-16GB/scipy/sqlalchemy/xlrd/xlwt/frame_methods.frame_apply_ref_by_name.time_frame_apply_ref_by_name.json", 
+            "indexing.indexing_dataframe_boolean_st.time_indexing_dataframe_boolean_st", 
+            "graphs/Cython/arch-x86_64/branch-master/cpu-Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz/machine-069-jreback.home/matplotlib/numexpr/numpy/openpyxl/os-Darwin 13.4.0/pytables/python-2.7/ram-16GB/scipy/sqlalchemy/xlrd/xlwt/indexing.indexing_dataframe_boolean_st.time_indexing_dataframe_boolean_st.json", 
             {}, 
             null, 
             [
                 [
                     [
-                        1404748822000, 
-                        1409898548000
+                        1396356779000, 
+                        1401450122000
                     ]
                 ], 
-                0.013608749999999998, 
-                0.009680299999999996
+                0.03266300000000005, 
+                0.006445150000000005
             ]
         ], 
         [
@@ -317,7 +493,7 @@
                     ]
                 ], 
                 0.0012248899999999995, 
-                0.0007779099999999994
+                0.0006753300000000001
             ]
         ], 
         [
@@ -333,7 +509,23 @@
                     ]
                 ], 
                 0.2217889999999999, 
-                0.105989
+                0.10441999999999996
+            ]
+        ], 
+        [
+            "stat_ops.stat_ops_level_frame_sum.time_stat_ops_level_frame_sum", 
+            "graphs/Cython/arch-x86_64/branch-master/cpu-Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz/machine-069-jreback.home/matplotlib/numexpr/numpy/openpyxl/os-Darwin 13.4.0/pytables/python-2.7/ram-16GB/scipy/sqlalchemy/xlrd/xlwt/stat_ops.stat_ops_level_frame_sum.time_stat_ops_level_frame_sum.json", 
+            {}, 
+            null, 
+            [
+                [
+                    [
+                        1396356779000, 
+                        1401450122000
+                    ]
+                ], 
+                0.002398799999999998, 
+                0.002155749999999998
             ]
         ], 
         [
@@ -349,7 +541,23 @@
                     ]
                 ], 
                 0.0012178599999999994, 
-                0.0007639600000000002
+                0.0006767499999999998
+            ]
+        ], 
+        [
+            "frame_ctor.frame_ctor_dtindex_DateOffsetx2.time_frame_ctor_dtindex_DateOffsetx2", 
+            "graphs/Cython/arch-x86_64/branch-master/cpu-Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz/machine-069-jreback.home/matplotlib/numexpr/numpy/openpyxl/os-Darwin 13.4.0/pytables/python-2.7/ram-16GB/scipy/sqlalchemy/xlrd/xlwt/frame_ctor.frame_ctor_dtindex_DateOffsetx2.time_frame_ctor_dtindex_DateOffsetx2.json", 
+            {}, 
+            null, 
+            [
+                [
+                    [
+                        1401450122000, 
+                        1404748822000
+                    ]
+                ], 
+                0.0010281499999999998, 
+                0.0007800400000000002
             ]
         ], 
         [
@@ -365,7 +573,7 @@
                     ]
                 ], 
                 5.015049999999999e-06, 
-                1.3214999999999932e-06
+                1.3204749999999965e-06
             ]
         ], 
         [
@@ -397,7 +605,7 @@
                     ]
                 ], 
                 0.00121954, 
-                0.0007787600000000005
+                0.0006678200000000001
             ]
         ], 
         [
@@ -413,7 +621,7 @@
                     ]
                 ], 
                 0.0012152399999999996, 
-                0.0008047199999999999
+                0.0006800999999999996
             ]
         ], 
         [
@@ -424,12 +632,32 @@
             [
                 [
                     [
+                        1401450122000, 
+                        1404748822000
+                    ], 
+                    [
                         1413672736000, 
                         1419909362000
                     ]
                 ], 
                 0.002985749999999998, 
-                0.0016147849999999997
+                0.0013127349999999998
+            ]
+        ], 
+        [
+            "indexing.indexing_dataframe_boolean_no_ne.time_indexing_dataframe_boolean_no_ne", 
+            "graphs/Cython/arch-x86_64/branch-master/cpu-Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz/machine-069-jreback.home/matplotlib/numexpr/numpy/openpyxl/os-Darwin 13.4.0/pytables/python-2.7/ram-16GB/scipy/sqlalchemy/xlrd/xlwt/indexing.indexing_dataframe_boolean_no_ne.time_indexing_dataframe_boolean_no_ne.json", 
+            {}, 
+            null, 
+            [
+                [
+                    [
+                        1396356779000, 
+                        1401450122000
+                    ]
+                ], 
+                0.08276299999999998, 
+                0.051118
             ]
         ], 
         [
@@ -440,12 +668,48 @@
             [
                 [
                     [
+                        1396356779000, 
+                        1401450122000
+                    ], 
+                    [
                         1413672736000, 
                         1419909362000
                     ]
                 ], 
                 0.003775499999999993, 
-                0.00029102999999999936
+                0.00023846999999999784
+            ]
+        ], 
+        [
+            "frame_ctor.frame_ctor_dtindex_DateOffsetx1.time_frame_ctor_dtindex_DateOffsetx1", 
+            "graphs/Cython/arch-x86_64/branch-master/cpu-Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz/machine-069-jreback.home/matplotlib/numexpr/numpy/openpyxl/os-Darwin 13.4.0/pytables/python-2.7/ram-16GB/scipy/sqlalchemy/xlrd/xlwt/frame_ctor.frame_ctor_dtindex_DateOffsetx1.time_frame_ctor_dtindex_DateOffsetx1.json", 
+            {}, 
+            null, 
+            [
+                [
+                    [
+                        1401450122000, 
+                        1404748822000
+                    ]
+                ], 
+                0.00101093, 
+                0.0007924799999999993
+            ]
+        ], 
+        [
+            "frame_ctor.frame_ctor_dtindex_BYearBeginx2.time_frame_ctor_dtindex_BYearBeginx2", 
+            "graphs/Cython/arch-x86_64/branch-master/cpu-Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz/machine-069-jreback.home/matplotlib/numexpr/numpy/openpyxl/os-Darwin 13.4.0/pytables/python-2.7/ram-16GB/scipy/sqlalchemy/xlrd/xlwt/frame_ctor.frame_ctor_dtindex_BYearBeginx2.time_frame_ctor_dtindex_BYearBeginx2.json", 
+            {}, 
+            null, 
+            [
+                [
+                    [
+                        1401450122000, 
+                        1404748822000
+                    ]
+                ], 
+                0.00152169, 
+                0.0009504999999999996
             ]
         ], 
         [
@@ -461,7 +725,23 @@
                     ]
                 ], 
                 0.016358799999999986, 
-                0.01198260000000002
+                0.011856299999999997
+            ]
+        ], 
+        [
+            "frame_methods.frame_html_repr_trunc_mi.time_frame_html_repr_trunc_mi", 
+            "graphs/Cython/arch-x86_64/branch-master/cpu-Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz/machine-069-jreback.home/matplotlib/numexpr/numpy/openpyxl/os-Darwin 13.4.0/pytables/python-2.7/ram-16GB/scipy/sqlalchemy/xlrd/xlwt/frame_methods.frame_html_repr_trunc_mi.time_frame_html_repr_trunc_mi.json", 
+            {}, 
+            null, 
+            [
+                [
+                    [
+                        1381408995000, 
+                        1388422887000
+                    ]
+                ], 
+                0.033003000000000005, 
+                0.0018986199999999997
             ]
         ], 
         [
@@ -481,6 +761,58 @@
             ]
         ], 
         [
+            "join_merge.append_frame_single_mixed.time_append_frame_single_mixed", 
+            "graphs/Cython/arch-x86_64/branch-master/cpu-Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz/machine-069-jreback.home/matplotlib/numexpr/numpy/openpyxl/os-Darwin 13.4.0/pytables/python-2.7/ram-16GB/scipy/sqlalchemy/xlrd/xlwt/join_merge.append_frame_single_mixed.time_append_frame_single_mixed.json", 
+            {}, 
+            null, 
+            [
+                [
+                    [
+                        1391301735000, 
+                        1396356779000
+                    ], 
+                    [
+                        1413672736000, 
+                        1419909362000
+                    ]
+                ], 
+                0.00158831, 
+                0.0005620999999999993
+            ]
+        ], 
+        [
+            "panel_methods.panel_shift_minor.time_panel_shift_minor", 
+            "graphs/Cython/arch-x86_64/branch-master/cpu-Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz/machine-069-jreback.home/matplotlib/numexpr/numpy/openpyxl/os-Darwin 13.4.0/pytables/python-2.7/ram-16GB/scipy/sqlalchemy/xlrd/xlwt/panel_methods.panel_shift_minor.time_panel_shift_minor.json", 
+            {}, 
+            null, 
+            [
+                [
+                    [
+                        1396356779000, 
+                        1401450122000
+                    ]
+                ], 
+                7.425749999999986e-05, 
+                4.786400000000057e-05
+            ]
+        ], 
+        [
+            "frame_methods.frame_html_repr_trunc_si.time_frame_html_repr_trunc_si", 
+            "graphs/Cython/arch-x86_64/branch-master/cpu-Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz/machine-069-jreback.home/matplotlib/numexpr/numpy/openpyxl/os-Darwin 13.4.0/pytables/python-2.7/ram-16GB/scipy/sqlalchemy/xlrd/xlwt/frame_methods.frame_html_repr_trunc_si.time_frame_html_repr_trunc_si.json", 
+            {}, 
+            null, 
+            [
+                [
+                    [
+                        1381408995000, 
+                        1388422887000
+                    ]
+                ], 
+                0.02552199999999999, 
+                0.0015908300000000008
+            ]
+        ], 
+        [
             "packers.packers_read_json.time_packers_read_json", 
             "graphs/Cython/arch-x86_64/branch-master/cpu-Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz/machine-069-jreback.home/matplotlib/numexpr/numpy/openpyxl/os-Darwin 13.4.0/pytables/python-2.7/ram-16GB/scipy/sqlalchemy/xlrd/xlwt/packers.packers_read_json.time_packers_read_json.json", 
             {}, 
@@ -493,7 +825,39 @@
                     ]
                 ], 
                 0.16543950000000002, 
-                0.13704199999999994
+                0.13608299999999995
+            ]
+        ], 
+        [
+            "frame_ctor.frame_get_numeric_data.time_frame_get_numeric_data", 
+            "graphs/Cython/arch-x86_64/branch-master/cpu-Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz/machine-069-jreback.home/matplotlib/numexpr/numpy/openpyxl/os-Darwin 13.4.0/pytables/python-2.7/ram-16GB/scipy/sqlalchemy/xlrd/xlwt/frame_ctor.frame_get_numeric_data.time_frame_get_numeric_data.json", 
+            {}, 
+            null, 
+            [
+                [
+                    [
+                        1391301735000, 
+                        1396356779000
+                    ]
+                ], 
+                9.086600000000001e-05, 
+                6.685400000000002e-05
+            ]
+        ], 
+        [
+            "binary_ops.timestamp_tz_series_compare.time_timestamp_series_compare", 
+            "graphs/Cython/arch-x86_64/branch-master/cpu-Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz/machine-069-jreback.home/matplotlib/numexpr/numpy/openpyxl/os-Darwin 13.4.0/pytables/python-2.7/ram-16GB/scipy/sqlalchemy/xlrd/xlwt/binary_ops.timestamp_tz_series_compare.time_timestamp_series_compare.json", 
+            {}, 
+            null, 
+            [
+                [
+                    [
+                        1391301735000, 
+                        1396356779000
+                    ]
+                ], 
+                0.0017883099999999996, 
+                8.765099999999998e-05
             ]
         ], 
         [
@@ -525,7 +889,23 @@
                     ]
                 ], 
                 0.282628, 
-                0.07215500000000002
+                0.07215799999999994
+            ]
+        ], 
+        [
+            "indexing.indexing_frame_get_value_ix.time_indexing_frame_get_value_ix", 
+            "graphs/Cython/arch-x86_64/branch-master/cpu-Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz/machine-069-jreback.home/matplotlib/numexpr/numpy/openpyxl/os-Darwin 13.4.0/pytables/python-2.7/ram-16GB/scipy/sqlalchemy/xlrd/xlwt/indexing.indexing_frame_get_value_ix.time_indexing_frame_get_value_ix.json", 
+            {}, 
+            null, 
+            [
+                [
+                    [
+                        1396356779000, 
+                        1401450122000
+                    ]
+                ], 
+                4.7537e-06, 
+                3.6040499999999973e-06
             ]
         ], 
         [
@@ -541,7 +921,7 @@
                     ]
                 ], 
                 0.02280700000000002, 
-                0.016215999999999953
+                0.017500000000000016
             ]
         ], 
         [
@@ -552,12 +932,16 @@
             [
                 [
                     [
+                        1396356779000, 
+                        1401450122000
+                    ], 
+                    [
                         1413672736000, 
                         1419909362000
                     ]
                 ], 
                 0.0439715, 
-                0.020084000000000046
+                0.013358799999999997
             ]
         ], 
         [
@@ -573,7 +957,7 @@
                     ]
                 ], 
                 0.00120315, 
-                0.0007687
+                0.0006844100000000003
             ]
         ], 
         [
@@ -589,7 +973,71 @@
                     ]
                 ], 
                 0.0011990299999999998, 
-                0.0007777200000000001
+                0.0007021200000000005
+            ]
+        ], 
+        [
+            "timeseries.dti_reset_index.time_dti_reset_index", 
+            "graphs/Cython/arch-x86_64/branch-master/cpu-Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz/machine-069-jreback.home/matplotlib/numexpr/numpy/openpyxl/os-Darwin 13.4.0/pytables/python-2.7/ram-16GB/scipy/sqlalchemy/xlrd/xlwt/timeseries.dti_reset_index.time_dti_reset_index.json", 
+            {}, 
+            null, 
+            [
+                [
+                    [
+                        1396356779000, 
+                        1401450122000
+                    ]
+                ], 
+                0.0003328199999999998, 
+                0.0001874309999999999
+            ]
+        ], 
+        [
+            "indexing.indexing_dataframe_boolean.time_indexing_dataframe_boolean", 
+            "graphs/Cython/arch-x86_64/branch-master/cpu-Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz/machine-069-jreback.home/matplotlib/numexpr/numpy/openpyxl/os-Darwin 13.4.0/pytables/python-2.7/ram-16GB/scipy/sqlalchemy/xlrd/xlwt/indexing.indexing_dataframe_boolean.time_indexing_dataframe_boolean.json", 
+            {}, 
+            null, 
+            [
+                [
+                    [
+                        1396356779000, 
+                        1401450122000
+                    ]
+                ], 
+                0.04776600000000003, 
+                0.01422650000000003
+            ]
+        ], 
+        [
+            "indexing.frame_loc_dups.time_frame_loc_dups", 
+            "graphs/Cython/arch-x86_64/branch-master/cpu-Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz/machine-069-jreback.home/matplotlib/numexpr/numpy/openpyxl/os-Darwin 13.4.0/pytables/python-2.7/ram-16GB/scipy/sqlalchemy/xlrd/xlwt/indexing.frame_loc_dups.time_frame_loc_dups.json", 
+            {}, 
+            null, 
+            [
+                [
+                    [
+                        1404748822000, 
+                        1409898548000
+                    ]
+                ], 
+                0.0008868400000000001, 
+                0.0005714200000000002
+            ]
+        ], 
+        [
+            "frame_ctor.frame_ctor_dtindex_QuarterEndx2.time_frame_ctor_dtindex_QuarterEndx2", 
+            "graphs/Cython/arch-x86_64/branch-master/cpu-Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz/machine-069-jreback.home/matplotlib/numexpr/numpy/openpyxl/os-Darwin 13.4.0/pytables/python-2.7/ram-16GB/scipy/sqlalchemy/xlrd/xlwt/frame_ctor.frame_ctor_dtindex_QuarterEndx2.time_frame_ctor_dtindex_QuarterEndx2.json", 
+            {}, 
+            null, 
+            [
+                [
+                    [
+                        1413672736000, 
+                        1419909362000
+                    ]
+                ], 
+                0.0014679449999999996, 
+                0.000991399999999999
             ]
         ], 
         [
@@ -605,7 +1053,7 @@
                     ]
                 ], 
                 0.18940249999999992, 
-                4.3574e-05
+                4.180500000000001e-05
             ]
         ], 
         [
@@ -621,7 +1069,7 @@
                     ]
                 ], 
                 0.004100399999999999, 
-                0.002257215
+                0.00201163
             ]
         ], 
         [
@@ -637,7 +1085,7 @@
                     ]
                 ], 
                 5.208600000000002e-05, 
-                3.474900000000003e-05
+                3.3890000000000084e-05
             ]
         ], 
         [
@@ -653,7 +1101,7 @@
                     ]
                 ], 
                 0.012876049999999995, 
-                0.006364600000000003
+                0.005435800000000002
             ]
         ], 
         [
@@ -669,7 +1117,7 @@
                     ]
                 ], 
                 0.0012042600000000004, 
-                0.0007894900000000004
+                0.0007048900000000002
             ]
         ], 
         [
@@ -685,7 +1133,7 @@
                     ]
                 ], 
                 0.158364, 
-                0.03314650000000002
+                0.0326245
             ]
         ], 
         [
@@ -721,6 +1169,22 @@
             ]
         ], 
         [
+            "frame_methods.frame_repr_tall.time_frame_repr_tall", 
+            "graphs/Cython/arch-x86_64/branch-master/cpu-Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz/machine-069-jreback.home/matplotlib/numexpr/numpy/openpyxl/os-Darwin 13.4.0/pytables/python-2.7/ram-16GB/scipy/sqlalchemy/xlrd/xlwt/frame_methods.frame_repr_tall.time_frame_repr_tall.json", 
+            {}, 
+            null, 
+            [
+                [
+                    [
+                        1381408995000, 
+                        1388422887000
+                    ]
+                ], 
+                0.018204499999999995, 
+                0.00182033
+            ]
+        ], 
+        [
             "timeseries.timeseries_day_apply.time_timeseries_day_apply", 
             "graphs/Cython/arch-x86_64/branch-master/cpu-Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz/machine-069-jreback.home/matplotlib/numexpr/numpy/openpyxl/os-Darwin 13.4.0/pytables/python-2.7/ram-16GB/scipy/sqlalchemy/xlrd/xlwt/timeseries.timeseries_day_apply.time_timeseries_day_apply.json", 
             {}, 
@@ -749,7 +1213,7 @@
                     ]
                 ], 
                 0.16544750000000003, 
-                0.13988849999999997
+                0.13733699999999993
             ]
         ], 
         [
@@ -765,7 +1229,7 @@
                     ]
                 ], 
                 0.10902549999999997, 
-                0.09972550000000002
+                0.09963299999999997
             ]
         ], 
         [
@@ -781,7 +1245,7 @@
                     ]
                 ], 
                 0.004186800000000002, 
-                0.003929700000000003
+                0.003922300000000001
             ]
         ], 
         [
@@ -797,7 +1261,7 @@
                     ]
                 ], 
                 0.0015902850000000007, 
-                0.0011088999999999995
+                0.0009747999999999995
             ]
         ], 
         [
@@ -813,7 +1277,7 @@
                     ]
                 ], 
                 0.0011886599999999998, 
-                0.0007713999999999999
+                0.00068708
             ]
         ], 
         [
@@ -829,7 +1293,7 @@
                     ]
                 ], 
                 9.2269e-05, 
-                5.031599999999997e-05
+                4.563899999999999e-05
             ]
         ], 
         [
@@ -845,7 +1309,7 @@
                     ]
                 ], 
                 0.014311999999999991, 
-                0.0049485999999999974
+                0.004958600000000002
             ]
         ], 
         [
@@ -861,7 +1325,23 @@
                     ]
                 ], 
                 0.0011879000000000006, 
-                0.0009123899999999996
+                0.0009067999999999998
+            ]
+        ], 
+        [
+            "frame_ctor.frame_ctor_dtindex_BYearEndx2.time_frame_ctor_dtindex_BYearEndx2", 
+            "graphs/Cython/arch-x86_64/branch-master/cpu-Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz/machine-069-jreback.home/matplotlib/numexpr/numpy/openpyxl/os-Darwin 13.4.0/pytables/python-2.7/ram-16GB/scipy/sqlalchemy/xlrd/xlwt/frame_ctor.frame_ctor_dtindex_BYearEndx2.time_frame_ctor_dtindex_BYearEndx2.json", 
+            {}, 
+            null, 
+            [
+                [
+                    [
+                        1401450122000, 
+                        1404748822000
+                    ]
+                ], 
+                0.0015207399999999998, 
+                0.0009509499999999999
             ]
         ]
     ]
