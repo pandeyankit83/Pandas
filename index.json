@@ -2424,10 +2424,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_agg_builtins1.time_groupby_agg_builtins1": {
+        "groupby.groupby_agg_builtins.time_groupby_agg_builtins1": {
             "code": "def time_groupby_agg_builtins1(self):\n    self.df.groupby('jim').agg([sum, min, max])\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_agg_builtins1.time_groupby_agg_builtins1", 
+            "name": "groupby.groupby_agg_builtins.time_groupby_agg_builtins1", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -2436,10 +2436,34 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_agg_builtins2.time_groupby_agg_builtins2": {
+        "groupby.groupby_agg_builtins.time_groupby_agg_builtins2": {
             "code": "def time_groupby_agg_builtins2(self):\n    self.df.groupby(['jim', 'joe']).agg([sum, min, max])\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_agg_builtins2.time_groupby_agg_builtins2", 
+            "name": "groupby.groupby_agg_builtins.time_groupby_agg_builtins2", 
+            "number": 0, 
+            "param_names": [], 
+            "params": [], 
+            "repeat": 0, 
+            "timeout": 60.0, 
+            "type": "time", 
+            "unit": "seconds"
+        }, 
+        "groupby.groupby_agg_multi.time_groupby_multi_different_functions": {
+            "code": "def time_groupby_multi_different_functions(self):\n    self.df.groupby(['key1', 'key2']).agg({'value1': 'mean', 'value2': 'var', 'value3': 'sum'})\n", 
+            "goal_time": 0.2, 
+            "name": "groupby.groupby_agg_multi.time_groupby_multi_different_functions", 
+            "number": 0, 
+            "param_names": [], 
+            "params": [], 
+            "repeat": 0, 
+            "timeout": 60.0, 
+            "type": "time", 
+            "unit": "seconds"
+        }, 
+        "groupby.groupby_agg_multi.time_groupby_multi_different_numpy_functions": {
+            "code": "def time_groupby_multi_different_numpy_functions(self):\n    self.df.groupby(['key1', 'key2']).agg({'value1': np.mean, 'value2': np.var, 'value3': np.sum})\n", 
+            "goal_time": 0.2, 
+            "name": "groupby.groupby_agg_multi.time_groupby_multi_different_numpy_functions", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -2460,46 +2484,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_dt_size.time_groupby_dt_size": {
-            "code": "def time_groupby_dt_size(self):\n    self.df.groupby(['dates']).size()\n", 
-            "goal_time": 0.2, 
-            "name": "groupby.groupby_dt_size.time_groupby_dt_size", 
-            "number": 0, 
-            "param_names": [], 
-            "params": [], 
-            "repeat": 0, 
-            "timeout": 60.0, 
-            "type": "time", 
-            "unit": "seconds"
-        }, 
-        "groupby.groupby_dt_timegrouper_size.time_groupby_dt_timegrouper_size": {
-            "code": "def time_groupby_dt_timegrouper_size(self):\n    self.df.groupby(TimeGrouper(key='dates', freq='M')).size()\n", 
-            "goal_time": 0.2, 
-            "name": "groupby.groupby_dt_timegrouper_size.time_groupby_dt_timegrouper_size", 
-            "number": 0, 
-            "param_names": [], 
-            "params": [], 
-            "repeat": 0, 
-            "timeout": 60.0, 
-            "type": "time", 
-            "unit": "seconds"
-        }, 
-        "groupby.groupby_first_datetimes.time_groupby_first_datetimes": {
-            "code": "def time_groupby_first_datetimes(self):\n    self.df.groupby('b').first()\n", 
-            "goal_time": 0.2, 
-            "name": "groupby.groupby_first_datetimes.time_groupby_first_datetimes", 
-            "number": 0, 
-            "param_names": [], 
-            "params": [], 
-            "repeat": 0, 
-            "timeout": 60.0, 
-            "type": "time", 
-            "unit": "seconds"
-        }, 
-        "groupby.groupby_first_float32.time_groupby_first_float32": {
+        "groupby.groupby_first_last.time_groupby_first_float32": {
             "code": "def time_groupby_first_float32(self):\n    self.data2.groupby(self.labels).first()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_first_float32.time_groupby_first_float32", 
+            "name": "groupby.groupby_first_last.time_groupby_first_float32", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -2508,10 +2496,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_first_float64.time_groupby_first_float64": {
+        "groupby.groupby_first_last.time_groupby_first_float64": {
             "code": "def time_groupby_first_float64(self):\n    self.data.groupby(self.labels).first()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_first_float64.time_groupby_first_float64", 
+            "name": "groupby.groupby_first_last.time_groupby_first_float64", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -2520,10 +2508,190 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_first_object.time_groupby_first_object": {
+        "groupby.groupby_first_last.time_groupby_last_float32": {
+            "code": "def time_groupby_last_float32(self):\n    self.data2.groupby(self.labels).last()\n", 
+            "goal_time": 0.2, 
+            "name": "groupby.groupby_first_last.time_groupby_last_float32", 
+            "number": 0, 
+            "param_names": [], 
+            "params": [], 
+            "repeat": 0, 
+            "timeout": 60.0, 
+            "type": "time", 
+            "unit": "seconds"
+        }, 
+        "groupby.groupby_first_last.time_groupby_last_float64": {
+            "code": "def time_groupby_last_float64(self):\n    self.data.groupby(self.labels).last()\n", 
+            "goal_time": 0.2, 
+            "name": "groupby.groupby_first_last.time_groupby_last_float64", 
+            "number": 0, 
+            "param_names": [], 
+            "params": [], 
+            "repeat": 0, 
+            "timeout": 60.0, 
+            "type": "time", 
+            "unit": "seconds"
+        }, 
+        "groupby.groupby_first_last.time_groupby_nth_float32_any": {
+            "code": "def time_groupby_nth_float32_any(self):\n    self.data2.groupby(self.labels).nth(0, dropna='all')\n", 
+            "goal_time": 0.2, 
+            "name": "groupby.groupby_first_last.time_groupby_nth_float32_any", 
+            "number": 0, 
+            "param_names": [], 
+            "params": [], 
+            "repeat": 0, 
+            "timeout": 60.0, 
+            "type": "time", 
+            "unit": "seconds"
+        }, 
+        "groupby.groupby_first_last.time_groupby_nth_float32_none": {
+            "code": "def time_groupby_nth_float32_none(self):\n    self.data2.groupby(self.labels).nth(0)\n", 
+            "goal_time": 0.2, 
+            "name": "groupby.groupby_first_last.time_groupby_nth_float32_none", 
+            "number": 0, 
+            "param_names": [], 
+            "params": [], 
+            "repeat": 0, 
+            "timeout": 60.0, 
+            "type": "time", 
+            "unit": "seconds"
+        }, 
+        "groupby.groupby_first_last.time_groupby_nth_float64_any": {
+            "code": "def time_groupby_nth_float64_any(self):\n    self.data.groupby(self.labels).nth(0, dropna='all')\n", 
+            "goal_time": 0.2, 
+            "name": "groupby.groupby_first_last.time_groupby_nth_float64_any", 
+            "number": 0, 
+            "param_names": [], 
+            "params": [], 
+            "repeat": 0, 
+            "timeout": 60.0, 
+            "type": "time", 
+            "unit": "seconds"
+        }, 
+        "groupby.groupby_first_last.time_groupby_nth_float64_none": {
+            "code": "def time_groupby_nth_float64_none(self):\n    self.data.groupby(self.labels).nth(0)\n", 
+            "goal_time": 0.2, 
+            "name": "groupby.groupby_first_last.time_groupby_nth_float64_none", 
+            "number": 0, 
+            "param_names": [], 
+            "params": [], 
+            "repeat": 0, 
+            "timeout": 60.0, 
+            "type": "time", 
+            "unit": "seconds"
+        }, 
+        "groupby.groupby_first_last_datetimes.time_groupby_first_datetimes": {
+            "code": "def time_groupby_first_datetimes(self):\n    self.df.groupby('b').first()\n", 
+            "goal_time": 0.2, 
+            "name": "groupby.groupby_first_last_datetimes.time_groupby_first_datetimes", 
+            "number": 0, 
+            "param_names": [], 
+            "params": [], 
+            "repeat": 0, 
+            "timeout": 60.0, 
+            "type": "time", 
+            "unit": "seconds"
+        }, 
+        "groupby.groupby_first_last_datetimes.time_groupby_last_datetimes": {
+            "code": "def time_groupby_last_datetimes(self):\n    self.df.groupby('b').last()\n", 
+            "goal_time": 0.2, 
+            "name": "groupby.groupby_first_last_datetimes.time_groupby_last_datetimes", 
+            "number": 0, 
+            "param_names": [], 
+            "params": [], 
+            "repeat": 0, 
+            "timeout": 60.0, 
+            "type": "time", 
+            "unit": "seconds"
+        }, 
+        "groupby.groupby_first_last_datetimes.time_groupby_nth_datetimes_any": {
+            "code": "def time_groupby_nth_datetimes_any(self):\n    self.df.groupby('b').nth(0, dropna='all')\n", 
+            "goal_time": 0.2, 
+            "name": "groupby.groupby_first_last_datetimes.time_groupby_nth_datetimes_any", 
+            "number": 0, 
+            "param_names": [], 
+            "params": [], 
+            "repeat": 0, 
+            "timeout": 60.0, 
+            "type": "time", 
+            "unit": "seconds"
+        }, 
+        "groupby.groupby_first_last_datetimes.time_groupby_nth_datetimes_none": {
+            "code": "def time_groupby_nth_datetimes_none(self):\n    self.df.groupby('b').nth(0)\n", 
+            "goal_time": 0.2, 
+            "name": "groupby.groupby_first_last_datetimes.time_groupby_nth_datetimes_none", 
+            "number": 0, 
+            "param_names": [], 
+            "params": [], 
+            "repeat": 0, 
+            "timeout": 60.0, 
+            "type": "time", 
+            "unit": "seconds"
+        }, 
+        "groupby.groupby_first_last_object.time_groupby_first_object": {
             "code": "def time_groupby_first_object(self):\n    self.df.groupby('b').first()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_first_object.time_groupby_first_object", 
+            "name": "groupby.groupby_first_last_object.time_groupby_first_object", 
+            "number": 0, 
+            "param_names": [], 
+            "params": [], 
+            "repeat": 0, 
+            "timeout": 60.0, 
+            "type": "time", 
+            "unit": "seconds"
+        }, 
+        "groupby.groupby_first_last_object.time_groupby_last_object": {
+            "code": "def time_groupby_last_object(self):\n    self.df.groupby('b').last()\n", 
+            "goal_time": 0.2, 
+            "name": "groupby.groupby_first_last_object.time_groupby_last_object", 
+            "number": 0, 
+            "param_names": [], 
+            "params": [], 
+            "repeat": 0, 
+            "timeout": 60.0, 
+            "type": "time", 
+            "unit": "seconds"
+        }, 
+        "groupby.groupby_first_last_object.time_groupby_nth_object_any": {
+            "code": "def time_groupby_nth_object_any(self):\n    self.df.groupby('b').nth(0, dropna='any')\n", 
+            "goal_time": 0.2, 
+            "name": "groupby.groupby_first_last_object.time_groupby_nth_object_any", 
+            "number": 0, 
+            "param_names": [], 
+            "params": [], 
+            "repeat": 0, 
+            "timeout": 60.0, 
+            "type": "time", 
+            "unit": "seconds"
+        }, 
+        "groupby.groupby_first_last_object.time_groupby_nth_object_none": {
+            "code": "def time_groupby_nth_object_none(self):\n    self.df.groupby('b').nth(0)\n", 
+            "goal_time": 0.2, 
+            "name": "groupby.groupby_first_last_object.time_groupby_nth_object_none", 
+            "number": 0, 
+            "param_names": [], 
+            "params": [], 
+            "repeat": 0, 
+            "timeout": 60.0, 
+            "type": "time", 
+            "unit": "seconds"
+        }, 
+        "groupby.groupby_frame.time_groupby_frame_median": {
+            "code": "def time_groupby_frame_median(self):\n    self.df.groupby(self.labels).median()\n", 
+            "goal_time": 0.2, 
+            "name": "groupby.groupby_frame.time_groupby_frame_median", 
+            "number": 0, 
+            "param_names": [], 
+            "params": [], 
+            "repeat": 0, 
+            "timeout": 60.0, 
+            "type": "time", 
+            "unit": "seconds"
+        }, 
+        "groupby.groupby_frame.time_groupby_simple_compress_timing": {
+            "code": "def time_groupby_simple_compress_timing(self):\n    self.df.groupby(self.labels).mean()\n", 
+            "goal_time": 0.2, 
+            "name": "groupby.groupby_frame.time_groupby_simple_compress_timing", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -2544,10 +2712,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_frame_apply_overhead.time_groupby_frame_apply_overhead": {
+        "groupby.groupby_frame_apply.time_groupby_frame_apply_overhead": {
             "code": "def time_groupby_frame_apply_overhead(self):\n    self.df.groupby('key').apply(self.f)\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_frame_apply_overhead.time_groupby_frame_apply_overhead", 
+            "name": "groupby.groupby_frame_apply.time_groupby_frame_apply_overhead", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -2556,10 +2724,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_frame_cython_many_columns.time_groupby_frame_cython_many_columns": {
-            "code": "def time_groupby_frame_cython_many_columns(self):\n    self.df.groupby(self.labels).sum()\n", 
+        "groupby.groupby_frame_cython_many_columns.time_sum": {
+            "code": "def time_sum(self):\n    self.df.groupby(self.labels).sum()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_frame_cython_many_columns.time_groupby_frame_cython_many_columns", 
+            "name": "groupby.groupby_frame_cython_many_columns.time_sum", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -2568,46 +2736,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_frame_median.time_groupby_frame_median": {
-            "code": "def time_groupby_frame_median(self):\n    self.df.groupby(self.labels).median()\n", 
+        "groupby.groupby_frame_singlekey_integer.time_sum": {
+            "code": "def time_sum(self):\n    self.df.groupby(self.labels).sum()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_frame_median.time_groupby_frame_median", 
-            "number": 0, 
-            "param_names": [], 
-            "params": [], 
-            "repeat": 0, 
-            "timeout": 60.0, 
-            "type": "time", 
-            "unit": "seconds"
-        }, 
-        "groupby.groupby_frame_nth_any.time_groupby_frame_nth_any": {
-            "code": "def time_groupby_frame_nth_any(self):\n    self.df.groupby(0).nth(0, dropna='any')\n", 
-            "goal_time": 0.2, 
-            "name": "groupby.groupby_frame_nth_any.time_groupby_frame_nth_any", 
-            "number": 0, 
-            "param_names": [], 
-            "params": [], 
-            "repeat": 0, 
-            "timeout": 60.0, 
-            "type": "time", 
-            "unit": "seconds"
-        }, 
-        "groupby.groupby_frame_nth_none.time_groupby_frame_nth_none": {
-            "code": "def time_groupby_frame_nth_none(self):\n    self.df.groupby(0).nth(0)\n", 
-            "goal_time": 0.2, 
-            "name": "groupby.groupby_frame_nth_none.time_groupby_frame_nth_none", 
-            "number": 0, 
-            "param_names": [], 
-            "params": [], 
-            "repeat": 0, 
-            "timeout": 60.0, 
-            "type": "time", 
-            "unit": "seconds"
-        }, 
-        "groupby.groupby_frame_singlekey_integer.time_groupby_frame_singlekey_integer": {
-            "code": "def time_groupby_frame_singlekey_integer(self):\n    self.df.groupby(self.labels).sum()\n", 
-            "goal_time": 0.2, 
-            "name": "groupby.groupby_frame_singlekey_integer.time_groupby_frame_singlekey_integer", 
+            "name": "groupby.groupby_frame_singlekey_integer.time_sum", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -2652,10 +2784,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_last_datetimes.time_groupby_last_datetimes": {
-            "code": "def time_groupby_last_datetimes(self):\n    self.df.groupby('b').last()\n", 
+        "groupby.groupby_multi.time_groupby_multi_cython": {
+            "code": "def time_groupby_multi_cython(self):\n    self.df.groupby(['key1', 'key2']).sum()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_last_datetimes.time_groupby_last_datetimes", 
+            "name": "groupby.groupby_multi.time_groupby_multi_cython", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -2664,10 +2796,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_last_float32.time_groupby_last_float32": {
-            "code": "def time_groupby_last_float32(self):\n    self.data2.groupby(self.labels).last()\n", 
+        "groupby.groupby_multi.time_groupby_multi_python": {
+            "code": "def time_groupby_multi_python(self):\n    self.df.groupby(['key1', 'key2'])['data1'].agg((lambda x: x.values.sum()))\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_last_float32.time_groupby_last_float32", 
+            "name": "groupby.groupby_multi.time_groupby_multi_python", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -2676,10 +2808,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_last_float64.time_groupby_last_float64": {
-            "code": "def time_groupby_last_float64(self):\n    self.data.groupby(self.labels).last()\n", 
+        "groupby.groupby_multi.time_groupby_multi_series_op": {
+            "code": "def time_groupby_multi_series_op(self):\n    self.df.groupby(['key1', 'key2'])['data1'].agg(np.std)\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_last_float64.time_groupby_last_float64", 
+            "name": "groupby.groupby_multi.time_groupby_multi_series_op", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -2688,10 +2820,22 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_last_object.time_groupby_last_object": {
-            "code": "def time_groupby_last_object(self):\n    self.df.groupby('b').last()\n", 
+        "groupby.groupby_multi.time_groupby_series_simple_cython": {
+            "code": "def time_groupby_series_simple_cython(self):\n    self.simple_series.groupby(self.key1).sum()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_last_object.time_groupby_last_object", 
+            "name": "groupby.groupby_multi.time_groupby_series_simple_cython", 
+            "number": 0, 
+            "param_names": [], 
+            "params": [], 
+            "repeat": 0, 
+            "timeout": 60.0, 
+            "type": "time", 
+            "unit": "seconds"
+        }, 
+        "groupby.groupby_multi.time_groupby_series_simple_rank": {
+            "code": "def time_groupby_series_simple_rank(self):\n    self.df.groupby('key1').rank(pct=True)\n", 
+            "goal_time": 0.2, 
+            "name": "groupby.groupby_multi.time_groupby_series_simple_rank", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -2712,42 +2856,6 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_multi_cython.time_groupby_multi_cython": {
-            "code": "def time_groupby_multi_cython(self):\n    self.df.groupby(['key1', 'key2']).sum()\n", 
-            "goal_time": 0.2, 
-            "name": "groupby.groupby_multi_cython.time_groupby_multi_cython", 
-            "number": 0, 
-            "param_names": [], 
-            "params": [], 
-            "repeat": 0, 
-            "timeout": 60.0, 
-            "type": "time", 
-            "unit": "seconds"
-        }, 
-        "groupby.groupby_multi_different_functions.time_groupby_multi_different_functions": {
-            "code": "def time_groupby_multi_different_functions(self):\n    self.df.groupby(['key1', 'key2']).agg({'value1': 'mean', 'value2': 'var', 'value3': 'sum', })\n", 
-            "goal_time": 0.2, 
-            "name": "groupby.groupby_multi_different_functions.time_groupby_multi_different_functions", 
-            "number": 0, 
-            "param_names": [], 
-            "params": [], 
-            "repeat": 0, 
-            "timeout": 60.0, 
-            "type": "time", 
-            "unit": "seconds"
-        }, 
-        "groupby.groupby_multi_different_numpy_functions.time_groupby_multi_different_numpy_functions": {
-            "code": "def time_groupby_multi_different_numpy_functions(self):\n    self.df.groupby(['key1', 'key2']).agg({'value1': np.mean, 'value2': np.var, 'value3': np.sum, })\n", 
-            "goal_time": 0.2, 
-            "name": "groupby.groupby_multi_different_numpy_functions.time_groupby_multi_different_numpy_functions", 
-            "number": 0, 
-            "param_names": [], 
-            "params": [], 
-            "repeat": 0, 
-            "timeout": 60.0, 
-            "type": "time", 
-            "unit": "seconds"
-        }, 
         "groupby.groupby_multi_index.time_groupby_multi_index": {
             "code": "def time_groupby_multi_index(self):\n    self.df.groupby(list('abcd')).max()\n", 
             "goal_time": 0.2, 
@@ -2760,10 +2868,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_multi_python.time_groupby_multi_python": {
-            "code": "def time_groupby_multi_python(self):\n    self.df.groupby(['key1', 'key2'])['data1'].agg((lambda x: x.values.sum()))\n", 
+        "groupby.groupby_ngroups_100.time_all": {
+            "code": "def time_all(self):\n    self.df.groupby('value')['timestamp'].all()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_multi_python.time_groupby_multi_python", 
+            "name": "groupby.groupby_ngroups_100.time_all", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -2772,10 +2880,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_multi_series_op.time_groupby_multi_series_op": {
-            "code": "def time_groupby_multi_series_op(self):\n    self.df.groupby(['key1', 'key2'])['data1'].agg(np.std)\n", 
+        "groupby.groupby_ngroups_100.time_any": {
+            "code": "def time_any(self):\n    self.df.groupby('value')['timestamp'].any()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_multi_series_op.time_groupby_multi_series_op", 
+            "name": "groupby.groupby_ngroups_100.time_any", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -2784,10 +2892,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_multi_size.time_groupby_multi_size": {
-            "code": "def time_groupby_multi_size(self):\n    self.df.groupby(['key1', 'key2']).size()\n", 
+        "groupby.groupby_ngroups_100.time_count": {
+            "code": "def time_count(self):\n    self.df.groupby('value')['timestamp'].count()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_multi_size.time_groupby_multi_size", 
+            "name": "groupby.groupby_ngroups_100.time_count", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -2796,10 +2904,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_10000_all.time_groupby_ngroups_10000_all": {
-            "code": "def time_groupby_ngroups_10000_all(self):\n    self.df.groupby('value')['timestamp'].all()\n", 
+        "groupby.groupby_ngroups_100.time_cumcount": {
+            "code": "def time_cumcount(self):\n    self.df.groupby('value')['timestamp'].cumcount()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_10000_all.time_groupby_ngroups_10000_all", 
+            "name": "groupby.groupby_ngroups_100.time_cumcount", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -2808,10 +2916,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_10000_any.time_groupby_ngroups_10000_any": {
-            "code": "def time_groupby_ngroups_10000_any(self):\n    self.df.groupby('value')['timestamp'].any()\n", 
+        "groupby.groupby_ngroups_100.time_cummax": {
+            "code": "def time_cummax(self):\n    self.df.groupby('value')['timestamp'].cummax()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_10000_any.time_groupby_ngroups_10000_any", 
+            "name": "groupby.groupby_ngroups_100.time_cummax", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -2820,10 +2928,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_10000_count.time_groupby_ngroups_10000_count": {
-            "code": "def time_groupby_ngroups_10000_count(self):\n    self.df.groupby('value')['timestamp'].count()\n", 
+        "groupby.groupby_ngroups_100.time_cummin": {
+            "code": "def time_cummin(self):\n    self.df.groupby('value')['timestamp'].cummin()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_10000_count.time_groupby_ngroups_10000_count", 
+            "name": "groupby.groupby_ngroups_100.time_cummin", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -2832,10 +2940,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_10000_cumcount.time_groupby_ngroups_10000_cumcount": {
-            "code": "def time_groupby_ngroups_10000_cumcount(self):\n    self.df.groupby('value')['timestamp'].cumcount()\n", 
+        "groupby.groupby_ngroups_100.time_cumprod": {
+            "code": "def time_cumprod(self):\n    self.df.groupby('value')['timestamp'].cumprod()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_10000_cumcount.time_groupby_ngroups_10000_cumcount", 
+            "name": "groupby.groupby_ngroups_100.time_cumprod", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -2844,10 +2952,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_10000_cummax.time_groupby_ngroups_10000_cummax": {
-            "code": "def time_groupby_ngroups_10000_cummax(self):\n    self.df.groupby('value')['timestamp'].cummax()\n", 
+        "groupby.groupby_ngroups_100.time_cumsum": {
+            "code": "def time_cumsum(self):\n    self.df.groupby('value')['timestamp'].cumsum()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_10000_cummax.time_groupby_ngroups_10000_cummax", 
+            "name": "groupby.groupby_ngroups_100.time_cumsum", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -2856,10 +2964,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_10000_cummin.time_groupby_ngroups_10000_cummin": {
-            "code": "def time_groupby_ngroups_10000_cummin(self):\n    self.df.groupby('value')['timestamp'].cummin()\n", 
+        "groupby.groupby_ngroups_100.time_describe": {
+            "code": "def time_describe(self):\n    self.df.groupby('value')['timestamp'].describe()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_10000_cummin.time_groupby_ngroups_10000_cummin", 
+            "name": "groupby.groupby_ngroups_100.time_describe", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -2868,10 +2976,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_10000_cumprod.time_groupby_ngroups_10000_cumprod": {
-            "code": "def time_groupby_ngroups_10000_cumprod(self):\n    self.df.groupby('value')['timestamp'].cumprod()\n", 
+        "groupby.groupby_ngroups_100.time_diff": {
+            "code": "def time_diff(self):\n    self.df.groupby('value')['timestamp'].diff()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_10000_cumprod.time_groupby_ngroups_10000_cumprod", 
+            "name": "groupby.groupby_ngroups_100.time_diff", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -2880,10 +2988,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_10000_cumsum.time_groupby_ngroups_10000_cumsum": {
-            "code": "def time_groupby_ngroups_10000_cumsum(self):\n    self.df.groupby('value')['timestamp'].cumsum()\n", 
+        "groupby.groupby_ngroups_100.time_first": {
+            "code": "def time_first(self):\n    self.df.groupby('value')['timestamp'].first()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_10000_cumsum.time_groupby_ngroups_10000_cumsum", 
+            "name": "groupby.groupby_ngroups_100.time_first", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -2892,10 +3000,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_10000_describe.time_groupby_ngroups_10000_describe": {
-            "code": "def time_groupby_ngroups_10000_describe(self):\n    self.df.groupby('value')['timestamp'].describe()\n", 
+        "groupby.groupby_ngroups_100.time_head": {
+            "code": "def time_head(self):\n    self.df.groupby('value')['timestamp'].head()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_10000_describe.time_groupby_ngroups_10000_describe", 
+            "name": "groupby.groupby_ngroups_100.time_head", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -2904,10 +3012,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_10000_diff.time_groupby_ngroups_10000_diff": {
-            "code": "def time_groupby_ngroups_10000_diff(self):\n    self.df.groupby('value')['timestamp'].diff()\n", 
+        "groupby.groupby_ngroups_100.time_last": {
+            "code": "def time_last(self):\n    self.df.groupby('value')['timestamp'].last()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_10000_diff.time_groupby_ngroups_10000_diff", 
+            "name": "groupby.groupby_ngroups_100.time_last", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -2916,10 +3024,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_10000_first.time_groupby_ngroups_10000_first": {
-            "code": "def time_groupby_ngroups_10000_first(self):\n    self.df.groupby('value')['timestamp'].first()\n", 
+        "groupby.groupby_ngroups_100.time_mad": {
+            "code": "def time_mad(self):\n    self.df.groupby('value')['timestamp'].mad()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_10000_first.time_groupby_ngroups_10000_first", 
+            "name": "groupby.groupby_ngroups_100.time_mad", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -2928,10 +3036,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_10000_head.time_groupby_ngroups_10000_head": {
-            "code": "def time_groupby_ngroups_10000_head(self):\n    self.df.groupby('value')['timestamp'].head()\n", 
+        "groupby.groupby_ngroups_100.time_max": {
+            "code": "def time_max(self):\n    self.df.groupby('value')['timestamp'].max()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_10000_head.time_groupby_ngroups_10000_head", 
+            "name": "groupby.groupby_ngroups_100.time_max", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -2940,10 +3048,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_10000_last.time_groupby_ngroups_10000_last": {
-            "code": "def time_groupby_ngroups_10000_last(self):\n    self.df.groupby('value')['timestamp'].last()\n", 
+        "groupby.groupby_ngroups_100.time_mean": {
+            "code": "def time_mean(self):\n    self.df.groupby('value')['timestamp'].mean()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_10000_last.time_groupby_ngroups_10000_last", 
+            "name": "groupby.groupby_ngroups_100.time_mean", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -2952,10 +3060,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_10000_mad.time_groupby_ngroups_10000_mad": {
-            "code": "def time_groupby_ngroups_10000_mad(self):\n    self.df.groupby('value')['timestamp'].mad()\n", 
+        "groupby.groupby_ngroups_100.time_median": {
+            "code": "def time_median(self):\n    self.df.groupby('value')['timestamp'].median()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_10000_mad.time_groupby_ngroups_10000_mad", 
+            "name": "groupby.groupby_ngroups_100.time_median", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -2964,10 +3072,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_10000_max.time_groupby_ngroups_10000_max": {
-            "code": "def time_groupby_ngroups_10000_max(self):\n    self.df.groupby('value')['timestamp'].max()\n", 
+        "groupby.groupby_ngroups_100.time_min": {
+            "code": "def time_min(self):\n    self.df.groupby('value')['timestamp'].min()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_10000_max.time_groupby_ngroups_10000_max", 
+            "name": "groupby.groupby_ngroups_100.time_min", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -2976,10 +3084,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_10000_mean.time_groupby_ngroups_10000_mean": {
-            "code": "def time_groupby_ngroups_10000_mean(self):\n    self.df.groupby('value')['timestamp'].mean()\n", 
+        "groupby.groupby_ngroups_100.time_nunique": {
+            "code": "def time_nunique(self):\n    self.df.groupby('value')['timestamp'].nunique()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_10000_mean.time_groupby_ngroups_10000_mean", 
+            "name": "groupby.groupby_ngroups_100.time_nunique", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -2988,10 +3096,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_10000_median.time_groupby_ngroups_10000_median": {
-            "code": "def time_groupby_ngroups_10000_median(self):\n    self.df.groupby('value')['timestamp'].median()\n", 
+        "groupby.groupby_ngroups_100.time_pct_change": {
+            "code": "def time_pct_change(self):\n    self.df.groupby('value')['timestamp'].pct_change()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_10000_median.time_groupby_ngroups_10000_median", 
+            "name": "groupby.groupby_ngroups_100.time_pct_change", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -3000,10 +3108,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_10000_min.time_groupby_ngroups_10000_min": {
-            "code": "def time_groupby_ngroups_10000_min(self):\n    self.df.groupby('value')['timestamp'].min()\n", 
+        "groupby.groupby_ngroups_100.time_prod": {
+            "code": "def time_prod(self):\n    self.df.groupby('value')['timestamp'].prod()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_10000_min.time_groupby_ngroups_10000_min", 
+            "name": "groupby.groupby_ngroups_100.time_prod", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -3012,10 +3120,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_10000_nunique.time_groupby_ngroups_10000_nunique": {
-            "code": "def time_groupby_ngroups_10000_nunique(self):\n    self.df.groupby('value')['timestamp'].nunique()\n", 
+        "groupby.groupby_ngroups_100.time_rank": {
+            "code": "def time_rank(self):\n    self.df.groupby('value')['timestamp'].rank()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_10000_nunique.time_groupby_ngroups_10000_nunique", 
+            "name": "groupby.groupby_ngroups_100.time_rank", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -3024,10 +3132,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_10000_pct_change.time_groupby_ngroups_10000_pct_change": {
-            "code": "def time_groupby_ngroups_10000_pct_change(self):\n    self.df.groupby('value')['timestamp'].pct_change()\n", 
+        "groupby.groupby_ngroups_100.time_sem": {
+            "code": "def time_sem(self):\n    self.df.groupby('value')['timestamp'].sem()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_10000_pct_change.time_groupby_ngroups_10000_pct_change", 
+            "name": "groupby.groupby_ngroups_100.time_sem", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -3036,10 +3144,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_10000_prod.time_groupby_ngroups_10000_prod": {
-            "code": "def time_groupby_ngroups_10000_prod(self):\n    self.df.groupby('value')['timestamp'].prod()\n", 
+        "groupby.groupby_ngroups_100.time_size": {
+            "code": "def time_size(self):\n    self.df.groupby('value')['timestamp'].size()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_10000_prod.time_groupby_ngroups_10000_prod", 
+            "name": "groupby.groupby_ngroups_100.time_size", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -3048,10 +3156,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_10000_rank.time_groupby_ngroups_10000_rank": {
-            "code": "def time_groupby_ngroups_10000_rank(self):\n    self.df.groupby('value')['timestamp'].rank()\n", 
+        "groupby.groupby_ngroups_100.time_skew": {
+            "code": "def time_skew(self):\n    self.df.groupby('value')['timestamp'].skew()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_10000_rank.time_groupby_ngroups_10000_rank", 
+            "name": "groupby.groupby_ngroups_100.time_skew", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -3060,10 +3168,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_10000_sem.time_groupby_ngroups_10000_sem": {
-            "code": "def time_groupby_ngroups_10000_sem(self):\n    self.df.groupby('value')['timestamp'].sem()\n", 
+        "groupby.groupby_ngroups_100.time_std": {
+            "code": "def time_std(self):\n    self.df.groupby('value')['timestamp'].std()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_10000_sem.time_groupby_ngroups_10000_sem", 
+            "name": "groupby.groupby_ngroups_100.time_std", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -3072,10 +3180,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_10000_size.time_groupby_ngroups_10000_size": {
-            "code": "def time_groupby_ngroups_10000_size(self):\n    self.df.groupby('value')['timestamp'].size()\n", 
+        "groupby.groupby_ngroups_100.time_sum": {
+            "code": "def time_sum(self):\n    self.df.groupby('value')['timestamp'].sum()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_10000_size.time_groupby_ngroups_10000_size", 
+            "name": "groupby.groupby_ngroups_100.time_sum", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -3084,10 +3192,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_10000_skew.time_groupby_ngroups_10000_skew": {
-            "code": "def time_groupby_ngroups_10000_skew(self):\n    self.df.groupby('value')['timestamp'].skew()\n", 
+        "groupby.groupby_ngroups_100.time_tail": {
+            "code": "def time_tail(self):\n    self.df.groupby('value')['timestamp'].tail()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_10000_skew.time_groupby_ngroups_10000_skew", 
+            "name": "groupby.groupby_ngroups_100.time_tail", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -3096,10 +3204,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_10000_std.time_groupby_ngroups_10000_std": {
-            "code": "def time_groupby_ngroups_10000_std(self):\n    self.df.groupby('value')['timestamp'].std()\n", 
+        "groupby.groupby_ngroups_100.time_unique": {
+            "code": "def time_unique(self):\n    self.df.groupby('value')['timestamp'].unique()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_10000_std.time_groupby_ngroups_10000_std", 
+            "name": "groupby.groupby_ngroups_100.time_unique", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -3108,10 +3216,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_10000_sum.time_groupby_ngroups_10000_sum": {
-            "code": "def time_groupby_ngroups_10000_sum(self):\n    self.df.groupby('value')['timestamp'].sum()\n", 
+        "groupby.groupby_ngroups_100.time_value_counts": {
+            "code": "def time_value_counts(self):\n    self.df.groupby('value')['timestamp'].value_counts()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_10000_sum.time_groupby_ngroups_10000_sum", 
+            "name": "groupby.groupby_ngroups_100.time_value_counts", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -3120,10 +3228,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_10000_tail.time_groupby_ngroups_10000_tail": {
-            "code": "def time_groupby_ngroups_10000_tail(self):\n    self.df.groupby('value')['timestamp'].tail()\n", 
+        "groupby.groupby_ngroups_100.time_var": {
+            "code": "def time_var(self):\n    self.df.groupby('value')['timestamp'].var()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_10000_tail.time_groupby_ngroups_10000_tail", 
+            "name": "groupby.groupby_ngroups_100.time_var", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -3132,10 +3240,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_10000_unique.time_groupby_ngroups_10000_unique": {
-            "code": "def time_groupby_ngroups_10000_unique(self):\n    self.df.groupby('value')['timestamp'].unique()\n", 
+        "groupby.groupby_ngroups_10000.time_all": {
+            "code": "def time_all(self):\n    self.df.groupby('value')['timestamp'].all()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_10000_unique.time_groupby_ngroups_10000_unique", 
+            "name": "groupby.groupby_ngroups_10000.time_all", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -3144,10 +3252,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_10000_value_counts.time_groupby_ngroups_10000_value_counts": {
-            "code": "def time_groupby_ngroups_10000_value_counts(self):\n    self.df.groupby('value')['timestamp'].value_counts()\n", 
+        "groupby.groupby_ngroups_10000.time_any": {
+            "code": "def time_any(self):\n    self.df.groupby('value')['timestamp'].any()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_10000_value_counts.time_groupby_ngroups_10000_value_counts", 
+            "name": "groupby.groupby_ngroups_10000.time_any", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -3156,10 +3264,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_10000_var.time_groupby_ngroups_10000_var": {
-            "code": "def time_groupby_ngroups_10000_var(self):\n    self.df.groupby('value')['timestamp'].var()\n", 
+        "groupby.groupby_ngroups_10000.time_count": {
+            "code": "def time_count(self):\n    self.df.groupby('value')['timestamp'].count()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_10000_var.time_groupby_ngroups_10000_var", 
+            "name": "groupby.groupby_ngroups_10000.time_count", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -3168,10 +3276,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_100_all.time_groupby_ngroups_100_all": {
-            "code": "def time_groupby_ngroups_100_all(self):\n    self.df.groupby('value')['timestamp'].all()\n", 
+        "groupby.groupby_ngroups_10000.time_cumcount": {
+            "code": "def time_cumcount(self):\n    self.df.groupby('value')['timestamp'].cumcount()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_100_all.time_groupby_ngroups_100_all", 
+            "name": "groupby.groupby_ngroups_10000.time_cumcount", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -3180,10 +3288,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_100_any.time_groupby_ngroups_100_any": {
-            "code": "def time_groupby_ngroups_100_any(self):\n    self.df.groupby('value')['timestamp'].any()\n", 
+        "groupby.groupby_ngroups_10000.time_cummax": {
+            "code": "def time_cummax(self):\n    self.df.groupby('value')['timestamp'].cummax()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_100_any.time_groupby_ngroups_100_any", 
+            "name": "groupby.groupby_ngroups_10000.time_cummax", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -3192,10 +3300,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_100_count.time_groupby_ngroups_100_count": {
-            "code": "def time_groupby_ngroups_100_count(self):\n    self.df.groupby('value')['timestamp'].count()\n", 
+        "groupby.groupby_ngroups_10000.time_cummin": {
+            "code": "def time_cummin(self):\n    self.df.groupby('value')['timestamp'].cummin()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_100_count.time_groupby_ngroups_100_count", 
+            "name": "groupby.groupby_ngroups_10000.time_cummin", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -3204,10 +3312,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_100_cumcount.time_groupby_ngroups_100_cumcount": {
-            "code": "def time_groupby_ngroups_100_cumcount(self):\n    self.df.groupby('value')['timestamp'].cumcount()\n", 
+        "groupby.groupby_ngroups_10000.time_cumprod": {
+            "code": "def time_cumprod(self):\n    self.df.groupby('value')['timestamp'].cumprod()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_100_cumcount.time_groupby_ngroups_100_cumcount", 
+            "name": "groupby.groupby_ngroups_10000.time_cumprod", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -3216,10 +3324,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_100_cummax.time_groupby_ngroups_100_cummax": {
-            "code": "def time_groupby_ngroups_100_cummax(self):\n    self.df.groupby('value')['timestamp'].cummax()\n", 
+        "groupby.groupby_ngroups_10000.time_cumsum": {
+            "code": "def time_cumsum(self):\n    self.df.groupby('value')['timestamp'].cumsum()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_100_cummax.time_groupby_ngroups_100_cummax", 
+            "name": "groupby.groupby_ngroups_10000.time_cumsum", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -3228,10 +3336,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_100_cummin.time_groupby_ngroups_100_cummin": {
-            "code": "def time_groupby_ngroups_100_cummin(self):\n    self.df.groupby('value')['timestamp'].cummin()\n", 
+        "groupby.groupby_ngroups_10000.time_describe": {
+            "code": "def time_describe(self):\n    self.df.groupby('value')['timestamp'].describe()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_100_cummin.time_groupby_ngroups_100_cummin", 
+            "name": "groupby.groupby_ngroups_10000.time_describe", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -3240,10 +3348,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_100_cumprod.time_groupby_ngroups_100_cumprod": {
-            "code": "def time_groupby_ngroups_100_cumprod(self):\n    self.df.groupby('value')['timestamp'].cumprod()\n", 
+        "groupby.groupby_ngroups_10000.time_diff": {
+            "code": "def time_diff(self):\n    self.df.groupby('value')['timestamp'].diff()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_100_cumprod.time_groupby_ngroups_100_cumprod", 
+            "name": "groupby.groupby_ngroups_10000.time_diff", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -3252,10 +3360,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_100_cumsum.time_groupby_ngroups_100_cumsum": {
-            "code": "def time_groupby_ngroups_100_cumsum(self):\n    self.df.groupby('value')['timestamp'].cumsum()\n", 
+        "groupby.groupby_ngroups_10000.time_first": {
+            "code": "def time_first(self):\n    self.df.groupby('value')['timestamp'].first()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_100_cumsum.time_groupby_ngroups_100_cumsum", 
+            "name": "groupby.groupby_ngroups_10000.time_first", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -3264,10 +3372,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_100_describe.time_groupby_ngroups_100_describe": {
-            "code": "def time_groupby_ngroups_100_describe(self):\n    self.df.groupby('value')['timestamp'].describe()\n", 
+        "groupby.groupby_ngroups_10000.time_head": {
+            "code": "def time_head(self):\n    self.df.groupby('value')['timestamp'].head()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_100_describe.time_groupby_ngroups_100_describe", 
+            "name": "groupby.groupby_ngroups_10000.time_head", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -3276,10 +3384,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_100_diff.time_groupby_ngroups_100_diff": {
-            "code": "def time_groupby_ngroups_100_diff(self):\n    self.df.groupby('value')['timestamp'].diff()\n", 
+        "groupby.groupby_ngroups_10000.time_last": {
+            "code": "def time_last(self):\n    self.df.groupby('value')['timestamp'].last()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_100_diff.time_groupby_ngroups_100_diff", 
+            "name": "groupby.groupby_ngroups_10000.time_last", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -3288,10 +3396,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_100_first.time_groupby_ngroups_100_first": {
-            "code": "def time_groupby_ngroups_100_first(self):\n    self.df.groupby('value')['timestamp'].first()\n", 
+        "groupby.groupby_ngroups_10000.time_mad": {
+            "code": "def time_mad(self):\n    self.df.groupby('value')['timestamp'].mad()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_100_first.time_groupby_ngroups_100_first", 
+            "name": "groupby.groupby_ngroups_10000.time_mad", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -3300,10 +3408,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_100_head.time_groupby_ngroups_100_head": {
-            "code": "def time_groupby_ngroups_100_head(self):\n    self.df.groupby('value')['timestamp'].head()\n", 
+        "groupby.groupby_ngroups_10000.time_max": {
+            "code": "def time_max(self):\n    self.df.groupby('value')['timestamp'].max()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_100_head.time_groupby_ngroups_100_head", 
+            "name": "groupby.groupby_ngroups_10000.time_max", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -3312,10 +3420,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_100_last.time_groupby_ngroups_100_last": {
-            "code": "def time_groupby_ngroups_100_last(self):\n    self.df.groupby('value')['timestamp'].last()\n", 
+        "groupby.groupby_ngroups_10000.time_mean": {
+            "code": "def time_mean(self):\n    self.df.groupby('value')['timestamp'].mean()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_100_last.time_groupby_ngroups_100_last", 
+            "name": "groupby.groupby_ngroups_10000.time_mean", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -3324,10 +3432,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_100_mad.time_groupby_ngroups_100_mad": {
-            "code": "def time_groupby_ngroups_100_mad(self):\n    self.df.groupby('value')['timestamp'].mad()\n", 
+        "groupby.groupby_ngroups_10000.time_median": {
+            "code": "def time_median(self):\n    self.df.groupby('value')['timestamp'].median()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_100_mad.time_groupby_ngroups_100_mad", 
+            "name": "groupby.groupby_ngroups_10000.time_median", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -3336,10 +3444,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_100_max.time_groupby_ngroups_100_max": {
-            "code": "def time_groupby_ngroups_100_max(self):\n    self.df.groupby('value')['timestamp'].max()\n", 
+        "groupby.groupby_ngroups_10000.time_min": {
+            "code": "def time_min(self):\n    self.df.groupby('value')['timestamp'].min()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_100_max.time_groupby_ngroups_100_max", 
+            "name": "groupby.groupby_ngroups_10000.time_min", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -3348,10 +3456,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_100_mean.time_groupby_ngroups_100_mean": {
-            "code": "def time_groupby_ngroups_100_mean(self):\n    self.df.groupby('value')['timestamp'].mean()\n", 
+        "groupby.groupby_ngroups_10000.time_nunique": {
+            "code": "def time_nunique(self):\n    self.df.groupby('value')['timestamp'].nunique()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_100_mean.time_groupby_ngroups_100_mean", 
+            "name": "groupby.groupby_ngroups_10000.time_nunique", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -3360,10 +3468,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_100_median.time_groupby_ngroups_100_median": {
-            "code": "def time_groupby_ngroups_100_median(self):\n    self.df.groupby('value')['timestamp'].median()\n", 
+        "groupby.groupby_ngroups_10000.time_pct_change": {
+            "code": "def time_pct_change(self):\n    self.df.groupby('value')['timestamp'].pct_change()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_100_median.time_groupby_ngroups_100_median", 
+            "name": "groupby.groupby_ngroups_10000.time_pct_change", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -3372,10 +3480,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_100_min.time_groupby_ngroups_100_min": {
-            "code": "def time_groupby_ngroups_100_min(self):\n    self.df.groupby('value')['timestamp'].min()\n", 
+        "groupby.groupby_ngroups_10000.time_prod": {
+            "code": "def time_prod(self):\n    self.df.groupby('value')['timestamp'].prod()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_100_min.time_groupby_ngroups_100_min", 
+            "name": "groupby.groupby_ngroups_10000.time_prod", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -3384,10 +3492,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_100_nunique.time_groupby_ngroups_100_nunique": {
-            "code": "def time_groupby_ngroups_100_nunique(self):\n    self.df.groupby('value')['timestamp'].nunique()\n", 
+        "groupby.groupby_ngroups_10000.time_rank": {
+            "code": "def time_rank(self):\n    self.df.groupby('value')['timestamp'].rank()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_100_nunique.time_groupby_ngroups_100_nunique", 
+            "name": "groupby.groupby_ngroups_10000.time_rank", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -3396,10 +3504,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_100_pct_change.time_groupby_ngroups_100_pct_change": {
-            "code": "def time_groupby_ngroups_100_pct_change(self):\n    self.df.groupby('value')['timestamp'].pct_change()\n", 
+        "groupby.groupby_ngroups_10000.time_sem": {
+            "code": "def time_sem(self):\n    self.df.groupby('value')['timestamp'].sem()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_100_pct_change.time_groupby_ngroups_100_pct_change", 
+            "name": "groupby.groupby_ngroups_10000.time_sem", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -3408,10 +3516,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_100_prod.time_groupby_ngroups_100_prod": {
-            "code": "def time_groupby_ngroups_100_prod(self):\n    self.df.groupby('value')['timestamp'].prod()\n", 
+        "groupby.groupby_ngroups_10000.time_size": {
+            "code": "def time_size(self):\n    self.df.groupby('value')['timestamp'].size()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_100_prod.time_groupby_ngroups_100_prod", 
+            "name": "groupby.groupby_ngroups_10000.time_size", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -3420,10 +3528,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_100_rank.time_groupby_ngroups_100_rank": {
-            "code": "def time_groupby_ngroups_100_rank(self):\n    self.df.groupby('value')['timestamp'].rank()\n", 
+        "groupby.groupby_ngroups_10000.time_skew": {
+            "code": "def time_skew(self):\n    self.df.groupby('value')['timestamp'].skew()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_100_rank.time_groupby_ngroups_100_rank", 
+            "name": "groupby.groupby_ngroups_10000.time_skew", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -3432,10 +3540,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_100_sem.time_groupby_ngroups_100_sem": {
-            "code": "def time_groupby_ngroups_100_sem(self):\n    self.df.groupby('value')['timestamp'].sem()\n", 
+        "groupby.groupby_ngroups_10000.time_std": {
+            "code": "def time_std(self):\n    self.df.groupby('value')['timestamp'].std()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_100_sem.time_groupby_ngroups_100_sem", 
+            "name": "groupby.groupby_ngroups_10000.time_std", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -3444,10 +3552,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_100_size.time_groupby_ngroups_100_size": {
-            "code": "def time_groupby_ngroups_100_size(self):\n    self.df.groupby('value')['timestamp'].size()\n", 
+        "groupby.groupby_ngroups_10000.time_sum": {
+            "code": "def time_sum(self):\n    self.df.groupby('value')['timestamp'].sum()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_100_size.time_groupby_ngroups_100_size", 
+            "name": "groupby.groupby_ngroups_10000.time_sum", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -3456,10 +3564,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_100_skew.time_groupby_ngroups_100_skew": {
-            "code": "def time_groupby_ngroups_100_skew(self):\n    self.df.groupby('value')['timestamp'].skew()\n", 
+        "groupby.groupby_ngroups_10000.time_tail": {
+            "code": "def time_tail(self):\n    self.df.groupby('value')['timestamp'].tail()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_100_skew.time_groupby_ngroups_100_skew", 
+            "name": "groupby.groupby_ngroups_10000.time_tail", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -3468,10 +3576,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_100_std.time_groupby_ngroups_100_std": {
-            "code": "def time_groupby_ngroups_100_std(self):\n    self.df.groupby('value')['timestamp'].std()\n", 
+        "groupby.groupby_ngroups_10000.time_unique": {
+            "code": "def time_unique(self):\n    self.df.groupby('value')['timestamp'].unique()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_100_std.time_groupby_ngroups_100_std", 
+            "name": "groupby.groupby_ngroups_10000.time_unique", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -3480,10 +3588,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_100_sum.time_groupby_ngroups_100_sum": {
-            "code": "def time_groupby_ngroups_100_sum(self):\n    self.df.groupby('value')['timestamp'].sum()\n", 
+        "groupby.groupby_ngroups_10000.time_value_counts": {
+            "code": "def time_value_counts(self):\n    self.df.groupby('value')['timestamp'].value_counts()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_100_sum.time_groupby_ngroups_100_sum", 
+            "name": "groupby.groupby_ngroups_10000.time_value_counts", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -3492,10 +3600,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_100_tail.time_groupby_ngroups_100_tail": {
-            "code": "def time_groupby_ngroups_100_tail(self):\n    self.df.groupby('value')['timestamp'].tail()\n", 
+        "groupby.groupby_ngroups_10000.time_var": {
+            "code": "def time_var(self):\n    self.df.groupby('value')['timestamp'].var()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_100_tail.time_groupby_ngroups_100_tail", 
+            "name": "groupby.groupby_ngroups_10000.time_var", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -3504,10 +3612,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_100_unique.time_groupby_ngroups_100_unique": {
-            "code": "def time_groupby_ngroups_100_unique(self):\n    self.df.groupby('value')['timestamp'].unique()\n", 
+        "groupby.groupby_nth.time_groupby_frame_nth_any": {
+            "code": "def time_groupby_frame_nth_any(self):\n    self.df.groupby(0).nth(0, dropna='any')\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_100_unique.time_groupby_ngroups_100_unique", 
+            "name": "groupby.groupby_nth.time_groupby_frame_nth_any", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -3516,10 +3624,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_100_value_counts.time_groupby_ngroups_100_value_counts": {
-            "code": "def time_groupby_ngroups_100_value_counts(self):\n    self.df.groupby('value')['timestamp'].value_counts()\n", 
+        "groupby.groupby_nth.time_groupby_frame_nth_none": {
+            "code": "def time_groupby_frame_nth_none(self):\n    self.df.groupby(0).nth(0)\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_100_value_counts.time_groupby_ngroups_100_value_counts", 
+            "name": "groupby.groupby_nth.time_groupby_frame_nth_none", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -3528,10 +3636,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_ngroups_100_var.time_groupby_ngroups_100_var": {
-            "code": "def time_groupby_ngroups_100_var(self):\n    self.df.groupby('value')['timestamp'].var()\n", 
+        "groupby.groupby_nth.time_groupby_series_nth_any": {
+            "code": "def time_groupby_series_nth_any(self):\n    self.df[1].groupby(self.df[0]).nth(0, dropna='any')\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_ngroups_100_var.time_groupby_ngroups_100_var", 
+            "name": "groupby.groupby_nth.time_groupby_series_nth_any", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -3540,94 +3648,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_nth_datetimes_any.time_groupby_nth_datetimes_any": {
-            "code": "def time_groupby_nth_datetimes_any(self):\n    self.df.groupby('b').nth(0, dropna='all')\n", 
+        "groupby.groupby_nth.time_groupby_series_nth_none": {
+            "code": "def time_groupby_series_nth_none(self):\n    self.df[1].groupby(self.df[0]).nth(0)\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_nth_datetimes_any.time_groupby_nth_datetimes_any", 
-            "number": 0, 
-            "param_names": [], 
-            "params": [], 
-            "repeat": 0, 
-            "timeout": 60.0, 
-            "type": "time", 
-            "unit": "seconds"
-        }, 
-        "groupby.groupby_nth_datetimes_none.time_groupby_nth_datetimes_none": {
-            "code": "def time_groupby_nth_datetimes_none(self):\n    self.df.groupby('b').nth(0)\n", 
-            "goal_time": 0.2, 
-            "name": "groupby.groupby_nth_datetimes_none.time_groupby_nth_datetimes_none", 
-            "number": 0, 
-            "param_names": [], 
-            "params": [], 
-            "repeat": 0, 
-            "timeout": 60.0, 
-            "type": "time", 
-            "unit": "seconds"
-        }, 
-        "groupby.groupby_nth_float32_any.time_groupby_nth_float32_any": {
-            "code": "def time_groupby_nth_float32_any(self):\n    self.data2.groupby(self.labels).nth(0, dropna='all')\n", 
-            "goal_time": 0.2, 
-            "name": "groupby.groupby_nth_float32_any.time_groupby_nth_float32_any", 
-            "number": 0, 
-            "param_names": [], 
-            "params": [], 
-            "repeat": 0, 
-            "timeout": 60.0, 
-            "type": "time", 
-            "unit": "seconds"
-        }, 
-        "groupby.groupby_nth_float32_none.time_groupby_nth_float32_none": {
-            "code": "def time_groupby_nth_float32_none(self):\n    self.data2.groupby(self.labels).nth(0)\n", 
-            "goal_time": 0.2, 
-            "name": "groupby.groupby_nth_float32_none.time_groupby_nth_float32_none", 
-            "number": 0, 
-            "param_names": [], 
-            "params": [], 
-            "repeat": 0, 
-            "timeout": 60.0, 
-            "type": "time", 
-            "unit": "seconds"
-        }, 
-        "groupby.groupby_nth_float64_any.time_groupby_nth_float64_any": {
-            "code": "def time_groupby_nth_float64_any(self):\n    self.data.groupby(self.labels).nth(0, dropna='all')\n", 
-            "goal_time": 0.2, 
-            "name": "groupby.groupby_nth_float64_any.time_groupby_nth_float64_any", 
-            "number": 0, 
-            "param_names": [], 
-            "params": [], 
-            "repeat": 0, 
-            "timeout": 60.0, 
-            "type": "time", 
-            "unit": "seconds"
-        }, 
-        "groupby.groupby_nth_float64_none.time_groupby_nth_float64_none": {
-            "code": "def time_groupby_nth_float64_none(self):\n    self.data.groupby(self.labels).nth(0)\n", 
-            "goal_time": 0.2, 
-            "name": "groupby.groupby_nth_float64_none.time_groupby_nth_float64_none", 
-            "number": 0, 
-            "param_names": [], 
-            "params": [], 
-            "repeat": 0, 
-            "timeout": 60.0, 
-            "type": "time", 
-            "unit": "seconds"
-        }, 
-        "groupby.groupby_nth_object_any.time_groupby_nth_object_any": {
-            "code": "def time_groupby_nth_object_any(self):\n    self.df.groupby('b').nth(0, dropna='any')\n", 
-            "goal_time": 0.2, 
-            "name": "groupby.groupby_nth_object_any.time_groupby_nth_object_any", 
-            "number": 0, 
-            "param_names": [], 
-            "params": [], 
-            "repeat": 0, 
-            "timeout": 60.0, 
-            "type": "time", 
-            "unit": "seconds"
-        }, 
-        "groupby.groupby_nth_object_none.time_groupby_nth_object_none": {
-            "code": "def time_groupby_nth_object_none(self):\n    self.df.groupby('b').nth(0)\n", 
-            "goal_time": 0.2, 
-            "name": "groupby.groupby_nth_object_none.time_groupby_nth_object_none", 
+            "name": "groupby.groupby_nth.time_groupby_series_nth_none", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -3648,10 +3672,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_series_nth_any.time_groupby_series_nth_any": {
-            "code": "def time_groupby_series_nth_any(self):\n    self.df[1].groupby(self.df[0]).nth(0, dropna='any')\n", 
+        "groupby.groupby_size.time_groupby_dt_size": {
+            "code": "def time_groupby_dt_size(self):\n    self.df.groupby(['dates']).size()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_series_nth_any.time_groupby_series_nth_any", 
+            "name": "groupby.groupby_size.time_groupby_dt_size", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -3660,10 +3684,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_series_nth_none.time_groupby_series_nth_none": {
-            "code": "def time_groupby_series_nth_none(self):\n    self.df[1].groupby(self.df[0]).nth(0)\n", 
+        "groupby.groupby_size.time_groupby_dt_timegrouper_size": {
+            "code": "def time_groupby_dt_timegrouper_size(self):\n    self.df.groupby(TimeGrouper(key='dates', freq='M')).size()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_series_nth_none.time_groupby_series_nth_none", 
+            "name": "groupby.groupby_size.time_groupby_dt_timegrouper_size", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -3672,22 +3696,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_series_simple_cython.time_groupby_series_simple_cython": {
-            "code": "def time_groupby_series_simple_cython(self):\n    self.df.groupby('key1').rank(pct=True)\n", 
+        "groupby.groupby_size.time_groupby_multi_size": {
+            "code": "def time_groupby_multi_size(self):\n    self.df.groupby(['key1', 'key2']).size()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_series_simple_cython.time_groupby_series_simple_cython", 
-            "number": 0, 
-            "param_names": [], 
-            "params": [], 
-            "repeat": 0, 
-            "timeout": 60.0, 
-            "type": "time", 
-            "unit": "seconds"
-        }, 
-        "groupby.groupby_simple_compress_timing.time_groupby_simple_compress_timing": {
-            "code": "def time_groupby_simple_compress_timing(self):\n    self.df.groupby(self.labels).mean()\n", 
-            "goal_time": 0.2, 
-            "name": "groupby.groupby_simple_compress_timing.time_groupby_simple_compress_timing", 
+            "name": "groupby.groupby_size.time_groupby_multi_size", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -3732,10 +3744,22 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_transform_multi_key1.time_groupby_transform_multi_key1": {
+        "groupby.groupby_transform.time_groupby_transform_ufunc": {
+            "code": "def time_groupby_transform_ufunc(self):\n    self.data.groupby(level='date').transform(np.max)\n", 
+            "goal_time": 0.2, 
+            "name": "groupby.groupby_transform.time_groupby_transform_ufunc", 
+            "number": 0, 
+            "param_names": [], 
+            "params": [], 
+            "repeat": 0, 
+            "timeout": 60.0, 
+            "type": "time", 
+            "unit": "seconds"
+        }, 
+        "groupby.groupby_transform_multi_key.time_groupby_transform_multi_key1": {
             "code": "def time_groupby_transform_multi_key1(self):\n    self.df.groupby(['jim', 'joe'])['jolie'].transform('max')\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_transform_multi_key1.time_groupby_transform_multi_key1", 
+            "name": "groupby.groupby_transform_multi_key.time_groupby_transform_multi_key1", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -3804,10 +3828,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.groupby_transform_ufunc.time_groupby_transform_ufunc": {
-            "code": "def time_groupby_transform_ufunc(self):\n    self.data.groupby(level='date').transform(np.max)\n", 
+        "groupby.series_value_counts.time_value_counts_float64": {
+            "code": "def time_value_counts_float64(self):\n    self.s2.value_counts()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.groupby_transform_ufunc.time_groupby_transform_ufunc", 
+            "name": "groupby.series_value_counts.time_value_counts_float64", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -3816,10 +3840,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.series_value_counts_float64.time_series_value_counts_float64": {
-            "code": "def time_series_value_counts_float64(self):\n    self.s.value_counts()\n", 
+        "groupby.series_value_counts.time_value_counts_int64": {
+            "code": "def time_value_counts_int64(self):\n    self.s.value_counts()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.series_value_counts_float64.time_series_value_counts_float64", 
+            "name": "groupby.series_value_counts.time_value_counts_int64", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -3828,22 +3852,10 @@
             "type": "time", 
             "unit": "seconds"
         }, 
-        "groupby.series_value_counts_int64.time_series_value_counts_int64": {
-            "code": "def time_series_value_counts_int64(self):\n    self.s.value_counts()\n", 
+        "groupby.series_value_counts.time_value_counts_strings": {
+            "code": "def time_value_counts_strings(self):\n    self.s.value_counts()\n", 
             "goal_time": 0.2, 
-            "name": "groupby.series_value_counts_int64.time_series_value_counts_int64", 
-            "number": 0, 
-            "param_names": [], 
-            "params": [], 
-            "repeat": 0, 
-            "timeout": 60.0, 
-            "type": "time", 
-            "unit": "seconds"
-        }, 
-        "groupby.series_value_counts_strings.time_series_value_counts_strings": {
-            "code": "def time_series_value_counts_strings(self):\n    self.s.value_counts()\n", 
-            "goal_time": 0.2, 
-            "name": "groupby.series_value_counts_strings.time_series_value_counts_strings", 
+            "name": "groupby.series_value_counts.time_value_counts_strings", 
             "number": 0, 
             "param_names": [], 
             "params": [], 
@@ -7862,6 +7874,9 @@
         }
     }, 
     "date_to_hash": {
+        "1391301735000": "9266a389", 
+        "1396356779000": "cf0ef428", 
+        "1401450122000": "da0f7ae3", 
         "1404748822000": "4c79a115", 
         "1409898548000": "d2694c85", 
         "1413672736000": "017adeaa", 
