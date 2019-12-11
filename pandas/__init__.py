@@ -168,7 +168,6 @@ from pandas.io.api import (
     # misc
     read_clipboard,
     read_parquet,
-    read_orc,
     read_feather,
     read_gbq,
     read_html,
